@@ -1,0 +1,6 @@
+ChatHelp will have id, from, to, created_at functions and will display the chats just like whatsapp
+
+chatview.ejs is the page for all chats available with functionalities of editing mssg and deleting a chat
+editchat.ejs is the form rendered to edit a mssg, by using id of the object in the database ; it uses put request to edit the mssg 
+in the all chats page
+newchat.ejs is for creating a new chat ; it uses post request in form to add the chat

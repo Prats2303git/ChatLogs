@@ -1,0 +1,7 @@
+.chat{
+    background-color: lightgreen;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 16px;
+    display: inline-block;
+}
