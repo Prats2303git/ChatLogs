@@ -16,6 +16,9 @@ app.set("views",path.join(__dirname,"views"));
 
 app.use(express.static(path.join(__dirname,"public")));
 
+app.get('/',(req,res)=>{
+    res.redirect('/chats');
+})
 app.get('/chats', async (req,res)=>{
     let chats = await Chat.find();
     res.render("chatview.ejs",{ chats });
