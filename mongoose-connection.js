@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 
-mongoose
-.connect(process.env.MONGODB_URI)
-.then(() => {
-    console.log("connected");
-})
-.catch((err) => {
-    console.log(err.message);
-})
-module.exports = mongoose.connection;
+mongoose.connect('mongodb://127.0.0.1:27017/chathelp', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+    console.log("Database Connected");
+});

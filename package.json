@@ -1,5 +1,5 @@
 {
-  "name": "mongowithejs",
+  "name": "chatlog",
   "version": "1.0.0",
   "description": "",
   "main": "mongoose-connection.js",
