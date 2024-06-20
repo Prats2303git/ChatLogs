@@ -5,6 +5,8 @@ An additional information is also provided for the time message was sent.
 - You can also create new messages and send it your friends through this app. 
 - All messsages appear at the home page
 
+Find the deployment at : https://chat-logs.vercel.app/chats
+
 https://github.com/Prats2303git/ChatLogs/assets/124715995/a4ff68c7-1321-4138-ac2d-ee0f581974ed
 
 **Clone the repository**
