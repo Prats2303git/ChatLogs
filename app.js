@@ -2,10 +2,17 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const path = require('path');
+const mongoose = require("mongoose");
 const methodOverride = require('method-override');
 const Chat = require('./models/chat.js');
 
-const db = require("./config/mongoose-connection");
+const dbUrl = process.env.MONGODB_URI;
+mongoose.connect(dbUrl);
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+    console.log("Database connected");
+});
 
 app.use(express.urlencoded({extended : true}));
 app.use(methodOverride("_method"));
